@@ -8,6 +8,7 @@ import {
     ProfileOutlined
 } from '@ant-design/icons';
 import { StyledHeader, StyledSubMenu } from '../../utility/layout/styledComponent';
+// import { Header } from 'antd/lib/layout/layout';
 
 function HeaderAdmin(props) {
 
@@ -20,10 +21,12 @@ function HeaderAdmin(props) {
 
     return (
         <>
-            <StyledHeader className="site-layout-background">
-                <Menu mode="horizontal"
+            <StyledHeader className="site-layout-background" theme='dark'>
+                <Menu
+                    mode="horizontal"
                     triggerSubMenuAction="click"
                     onClick={onMenuClick}
+                    theme="dark"
                 >
                     <StyledSubMenu key="SubMenu"
                         title={

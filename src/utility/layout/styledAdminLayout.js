@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 
 const { Content } = Layout;
 
@@ -9,10 +9,9 @@ export const StyledLayout = styled(Layout)`
 `;
 
 export const StyledContent = styled(Content)`
-    margin: 0 16px;
 `;
 
 export const StyledBackgroundColor = styled.div`
-    padding: 24px; 
+    padding: 13px 25px; 
     min-height: 360px;
 `;

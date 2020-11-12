@@ -20,7 +20,7 @@ function LoginForm(props) {
         console.log('Success:', history);
 
         localStorage.setItem('Auth', JSON.stringify(values));
-        if (history.location.state.from) {
+        if (history.location.state && history.location.state.from) {
             history.push(history.location.state.from);
         } else {
             history.push('/');

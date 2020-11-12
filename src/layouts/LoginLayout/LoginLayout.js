@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledLogin } from '../../utility/layout/styledLoginLayout';
 
-function LoginLayout({ children }) {
+function LoginLayout(props) {
     return (
         <>
             <StyledLogin>
-                {children}
+                {props.children}
             </StyledLogin>
         </>
     );

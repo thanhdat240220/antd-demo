@@ -1,24 +1,50 @@
 import React from 'react';
-import { Breadcrumb, Layout } from 'antd';
+import { Layout } from 'antd';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 import { StyledBackgroundColor, StyledContent, StyledLayout } from '../../utility/layout/styledAdminLayout';
 
-function AdminLayout({ children }) {
+import { sidebar as sidebarConfig } from '../../configs/sidebarConfig';
+
+function AdminLayout(props) {
+
+    // const renderRoutes = (routes) => {
+    //     return routes.map((route, index) => {
+    //         const {
+    //             component: Component,
+    //             isExtra,
+    //             path
+    //         } = route;
+    //         debugger
+    //         return (
+    //             <WrapSuspense>
+    //                 <Route
+    //                     key={index}
+    //                     path={path}
+    //                     extra={isExtra}
+    //                     component={Component}
+    //                 />
+    //             </WrapSuspense>
+    //         )
+    //     })
+    // }
+
     return (
         <StyledLayout >
-            <Sidebar />
+            <Sidebar routes={sidebarConfig} />
             <Layout className="site-layout">
                 <Header />
                 <StyledContent >
-                    <Breadcrumb>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
                     <StyledBackgroundColor className="site-layout-background" >
-                        {children}
+                        {/* <Switch>
+                            {
+                                renderRoutes(routesAdmin)
+                            }
+                            <Redirect from="*" to="/dashboard" />
+                        </Switch> */}
+                        {props.children}
                     </StyledBackgroundColor>
                 </StyledContent>
                 <Footer />

@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import LogoDefault from '../assets/logo-medium.png';
 
 export const WrapContent = styled.div`
+    height: ${props => props.height};
+    width: ${props => props.width};
     padding: ${props => props.padding};
     margin: ${props => props.margin};
     float: ${props => props.float};
@@ -12,6 +14,9 @@ export const WrapContent = styled.div`
     max-height: ${props => props.maxHeight};
     min-width: ${props => props.minWidth};
     max-width: ${props => props.maxWidth};
+    display: ${props => props.display};
+    justify-content: ${props => props.justifyContent};
+    align-items: ${props => props.alignItems};
 `;
 
 export const Logo = styled.div`

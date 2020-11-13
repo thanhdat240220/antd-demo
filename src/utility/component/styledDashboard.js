@@ -3,9 +3,9 @@ import { Tabs } from 'antd';
 
 //Tabs View
 
-export const HideNavTabs = styled(Tabs).attrs((props)=>({
-    animated:props.animated,
-    defaultActiveKey:props.defaultActiveKey
+export const HideNavTabs = styled(Tabs).attrs((props) => ({
+    animated: props.animated,
+    onChange: props.onChange
 }))`
     > .ant-tabs-nav{
         display:none;

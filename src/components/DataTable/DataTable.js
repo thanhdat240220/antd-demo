@@ -74,6 +74,7 @@ function DataTable(props) {
             okType: 'danger',
             cancelText: 'No',
             onOk() {
+                setDataSource(dataSource.filter(row => row.id !== record.id))
                 console.log('OK', record);
             },
             onCancel() {
